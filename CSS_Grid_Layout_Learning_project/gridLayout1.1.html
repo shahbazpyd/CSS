@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        /* 
+        This CSS uses Grid Layout to create a responsive web page layout.
+        The layout consists of a header, navigation, article, aside, section, and footer.
+         */
+
+        .container {
+            display: grid;
+            /* Enables grid layout for this container */
+            grid-template-columns: 1fr 3fr;
+            /* Defines two columns: 1 fraction unit and 3 fraction units */
+            grid-template-rows: auto auto 1fr 1fr auto;
+            /* Defines five rows: two auto rows (adjust to content), two 1fr rows (equal height), and one auto row (adjusts to content height) */
+            grid-template-areas:
+                /* Assigns names to grid areas for easy layout definition */
+                "header header"
+                "nav nav"
+                "aside article"
+                "section section"
+                "footer footer";
+            gap: 10px;
+            /* Sets spacing between grid rows and columns */
+            height: 100vh;
+            /* Makes the container fill the entire viewport height */
+        }
+
+        .header {
+            grid-area: header;
+            /* Places the header in the "header" grid area */
+            background-color: #eee;
+        }
+
+        .header-title {
+            text-align: center;
+        }
+
+        .nav {
+            grid-area: nav;
+            /* Places the nav in the "nav" grid area */
+            background-color: #ddd;
+        }
+
+        .article {
+            grid-area: article;
+            /* Places the article in the "article" grid area */
+            background-color: #ccc;
+        }
+
+        .aside {
+            grid-area: aside;
+            /* Places the aside in the "aside" grid area */
+            background-color: #bbb;
+        }
+
+        .aside-header {
+            background-color: #eee;
+        }
+
+        .section {
+            grid-area: section;
+            /* Places the section in the "section" grid area */
+            background-color: #aaa;
+        }
+
+        .footer {
+            grid-area: footer;
+            /* Places the footer in the "footer" grid area */
+            background-color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- The main container for the grid layout -->
+        <header class="header">
+            <!-- The header section -->
+            <h1 class="header-title">Header</h1>
+        </header>
+        <nav class="nav">
+            <!-- The navigation section -->
+            Nav
+        </nav>
+        <article class="article">
+            <!-- The main article content -->
+            Article
+        </article>
+        <aside class="aside">
+            <!-- The aside content -->
+            <header class="aside-header">
+                Aside Header
+            </header>
+        </aside>
+        <section class="section">
+            <!-- A content section -->
+            Section
+        </section>
+        <footer class="footer">
+            <!-- The footer section -->
+            Footer
+        </footer>
+
+    </div>
+</body>
+
+</html>
