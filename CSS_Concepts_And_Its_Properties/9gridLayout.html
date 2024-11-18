@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridLayout</title>
+    <style>
+        .container{
+        display: grid;
+        border: 2px solid green;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 80px 1fr 80px;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header header header header"
+        "sidebar main main main"
+        "footer footer footer footer" ;
+        }
+        @media(max-width: 768px) {
+            .container{
+                width: 100%;
+            }
+        }
+        header{
+            grid-area: header;
+            background: color #f0f0f0;
+            grid-column: 1/5;
+        }
+        nav{
+            grid-area: sidebar;
+            height: 400px;
+            background-color: #f5f5f5;
+            grid-row: 2/ span 2;
+        }
+        main{
+            grid-area: main;
+        }
+        footer{
+            grid-area: footer;
+            grid-column: 2/5;
+        }
+
+        .item{
+            border: 2px solid red;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="item">Header</header>
+        <nav class="item">Sidebar</nav>
+        <main class="item">Main Contant</main>
+        <footer class="item">Footer</footer>
+    </div>
+    <p>dfglkjfdklg</p>
+</body>
+</html>

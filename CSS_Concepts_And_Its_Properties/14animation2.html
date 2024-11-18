@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes bounce{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        .animated-element{
+            animation: bounce 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-element">This is an animated element.</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*Descendant selector*/
+    .container p {
+      color: blue;
+    }
+
+    /* Child selector */
+    .container>p {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>This is a paragraph within the container.</p>
+    <h3>This is a heading</h3>
+    <p>This is another paragraph within the container</p>
+    <div class="inner-container">
+      <p>This is a paragraph within the inner container.</p>
+      <div>
+        <p>inside third div</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
