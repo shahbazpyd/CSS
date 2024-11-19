@@ -1,0 +1,126 @@
+  /* Reset default margin and padding for all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+  }
+
+  /* Main container for the entire page layout */
+  .container {
+    width: 100vw;
+    /* Occupy full viewport width */
+    height: 100vh;
+    /* Occupy full viewport height */
+    border: 5px solid gray;
+    /* Add a border for visualization */
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: column;
+    /* Arrange children in a column */
+  }
+
+  /* Header section */
+  .header {
+    width: 98.5vw;
+    /* Slightly less than full viewport width to account for border */
+    height: 20vh;
+    /* 20% of viewport height */
+    border: 5px solid green;
+    /* Add a border for visualization */
+    margin: 5px;
+    /* Add some margin */
+  }
+
+  /* Navigation section */
+  .nav {
+    width: 98.5vw;
+    height: 10vh;
+    border: 5px solid rgb(100, 3, 142);
+    margin: 5px;
+  }
+
+  /* Container for the article and div sections */
+  .container2 {
+    width: 98.5vw;
+    height: 60vh;
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: row;
+    /* Arrange children in a row */
+  }
+
+  /* Container for aligning article footer to bottom */
+  .container3 {
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: column;
+    /* Arrange children in a column */
+    justify-content: flex-end;
+    /* Align content to the bottom */
+  }
+
+  /* Article section */
+  .article {
+    width: 57vw;
+    height: 57vh;
+    border: 5px solid rgb(17, 146, 245);
+    margin: 5px;
+  }
+
+  .article_header {
+    height: 10vh;
+    border: 5px solid green;
+    margin: 5px;
+  }
+
+  .article_section1 {
+    height: 5vh;
+    border: 5px solid green;
+    margin: 5px;
+  }
+
+  .article_section2 {
+    height: 5vh;
+    border: 5px solid green;
+    margin: 5px;
+
+  }
+
+  .article_footer {
+    height: 5vh;
+    border: 5px solid green;
+    margin: 5px;
+    margin-top: 150px;
+    /* Push footer down within the article*/
+  }
+
+  /* Div section */
+  .div {
+    width: 40vw;
+    height: 57vh;
+    border: 5px solid rgb(217, 133, 253);
+    margin: 5px;
+  }
+
+  .div_aside1 {
+    width: 38.5vw;
+    height: 25vh;
+    border: 5px solid rgb(179, 0, 255);
+    margin: 5px;
+  }
+
+  .div_aside2 {
+    width: 38.5vw;
+    height: 25vh;
+    border: 5px solid rgb(179, 0, 255);
+    margin: 5px;
+  }
+
+  /* Footer section */
+  .footer {
+    width: 98.5vw;
+    height: 10vh;
+    border: 5px solid rgb(196, 196, 200);
+    margin: 5px;
+  }
