@@ -1,0 +1,128 @@
+    /* Define CSS variables for common values */
+    :root {
+        --main-radius: 5px;
+        /* Common border radius */
+        --main-padding: 5px;
+        /* Common padding */
+    }
+
+    /* Main container using CSS Grid */
+    .container {
+        display: grid;
+        /* Enable grid layout */
+        height: 98vh;
+        /* Set height to 98% of viewport height */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* Create four equal-width columns */
+        grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+        /* Define row heights using fractions of available space */
+        grid-template-areas:
+            /* Define grid areas for layout structure */
+            "nav nav nav nav"
+            "sidebar main main main"
+            "sidebar contant1 contant2 contant3"
+            "footer footer footer footer";
+        grid-gap: 0.2rem;
+        /* Set gap between grid items */
+        font-weight: 800;
+        /* Set font weight */
+        text-transform: uppercase;
+        /* Transform text to uppercase */
+        font-family: sans-serif;
+        /* Set font family */
+        text-align: center;
+        /* Align text to center */
+        color: #004d40;
+        /* Set text color */
+    }
+
+    /* Style individual grid areas */
+    nav {
+        background-color: #F25022;
+        grid-area: nav;
+        /* Place element in the "nav" grid area */
+        border-radius: var(--main-radius);
+        /* Apply common border radius */
+        padding-top: var(--main-padding);
+        /* Apply common padding */
+    }
+
+    main {
+        background-color: #7FBA00;
+        grid-area: main;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    #sidebar {
+        background-color: #00A4EF;
+        grid-area: sidebar;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    #contant1 {
+        /* Typo here - should likely be "content1" */
+        background-color: #FFB900;
+        grid-area: contant1;
+        /* Typo here too - should likely be "content1" */
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    #contant2 {
+        /* Typo here - should likely be "content2" */
+        background-color: #737373;
+        grid-area: contant2;
+        /* Typo here too - should likely be "content2" */
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    #contant3 {
+        /* Typo here - should likely be "content3" */
+        background-color: #F25022;
+        grid-area: contant3;
+        /* Typo here too - should likely be "content3" */
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    footer {
+        background-color: #7fba00;
+        grid-area: footer;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+    }
+
+    /* Style the anchor element */
+    a {
+        text-align: center;
+        display: block;
+        font-family: inherit;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 1rem;
+    }
+
+    /* Media query for responsiveness (max-width: 550px) */
+    @media only screen and (max-width: 550px) {
+        .container {
+            grid-template-columns: 1fr;
+            /* Single column layout */
+            grid-template-rows: 0.4fr 2.2fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+            /* Adjust row heights */
+            grid-template-areas:
+                /* Redefine grid areas for single column */
+                "nav"
+                "sidebar"
+                "main"
+                "contant1"
+                /* Typo here - should likely be "content1" */
+                "contant2"
+                /* Typo here - should likely be "content2" */
+                "contant3"
+                /* Typo here - should likely be "content3" */
+                "footer";
+        }
+    }
