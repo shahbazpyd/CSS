@@ -1,0 +1,113 @@
+    /*
+        This CSS defines a responsive grid layout. It uses named grid areas to structure the
+        layout and a media query to adapt the layout for smaller screens.
+        */
+
+    body {
+        margin: 0;
+        /* Resets default body margin */
+        font-family: Arial, sans-serif;
+        /* Sets the default font */
+    }
+
+    .container {
+        /* Main grid container styles */
+        display: grid;
+        /* Enables grid layout */
+        grid-template-areas:
+            /* Defines the layout structure using named areas */
+            'header header header'
+            'sidebar main main'
+            'sidebar section content'
+            'footer footer footer';
+        grid-template-columns: 1fr 2fr 2fr;
+        /* Defines column widths (1 fraction, 2 fractions, 2 fractions) */
+        grid-template-rows: auto;
+        /* Row heights will adjust automatically to content */
+        gap: 10px;
+        /* Sets gap between grid items */
+        height: 100vh;
+        /* Sets container height to 100% of viewport height */
+        padding: 10px;
+        /* Adds padding around the container */
+        box-sizing: border-box;
+        /* Ensures padding and border are included in element width */
+    }
+
+    /* Styles for individual grid items based on their assigned grid area */
+    .header {
+        grid-area: header;
+        /* Places this element in the "header" grid area */
+        background-color: yellow;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: lightgreen;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: lightcoral;
+    }
+
+    .section {
+        grid-area: section;
+        background-color: lightblue;
+    }
+
+    .content {
+        grid-area: content;
+        background-color: lightpink;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: lightcyan;
+    }
+
+
+    /* Utility class for centering content within grid items */
+    .box {
+        display: flex;
+        /* Enables flexbox for alignment */
+        align-items: center;
+        /* Vertically centers content */
+        justify-content: center;
+        /* Horizontally centers content */
+        padding: 20px;
+        /* Adds padding inside the box */
+        font-size: 1.5em;
+        /* Sets font size */
+    }
+
+    /* Styles for the anchor tag */
+    a {
+        text-align: center;
+        display: block;
+        /* Makes the anchor a block-level element */
+        font-family: inherit;
+        /* Inherits font from parent */
+        text-decoration: none;
+        /* Removes underline */
+        font-weight: bold;
+        margin: 1rem;
+    }
+
+    /* Media query for responsive layout adjustments */
+    @media only screen and (max-width: 550px) {
+        .container {
+            grid-template-columns: 1fr;
+            /* Single column for smaller screens */
+            grid-template-rows: repeat(6, 1fr);
+            /* Creates 6 equal-height rows */
+            grid-template-areas:
+                /* Redefines grid areas for single-column layout */
+                "header"
+                "sidebar"
+                "main"
+                "section"
+                "content"
+                "footer";
+        }
+    }
